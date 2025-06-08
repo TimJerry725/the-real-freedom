@@ -1,14 +1,24 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import {
+    Select,
+    SelectTrigger,
+    SelectContent,
+    SelectItem,
+    SelectValue,
+} from '@/components/ui/select';
 
 // TypeScript interfaces
-interface CTAButtonProps {
-    text: string;
-    variant: 'primary' | 'secondary' | 'outline';
-    onClick?: () => void;
-}
-
 interface SectionProps {
     children: React.ReactNode;
     className?: string;
@@ -22,57 +32,33 @@ interface TestimonyCardProps {
 }
 
 // Reusable Components
-const CTAButton: React.FC<CTAButtonProps> = ({ text, variant, onClick }) => {
-    const baseClasses =
-        'px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4';
-
-    const variantClasses = {
-        primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300 shadow-lg',
-        secondary: 'bg-amber-500 text-white hover:bg-amber-600 focus:ring-amber-300 shadow-lg',
-        outline:
-            'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-300',
-    };
-
-    return (
-        <button
-            className={`${baseClasses} ${variantClasses[variant]}`}
-            onClick={onClick}
-            aria-label={text}
-            data-oid="py-cb-o"
-        >
-            {text}
-        </button>
-    );
-};
-
 const Section: React.FC<SectionProps> = ({ children, className = '', id }) => (
-    <section id={id} className={`py-16 px-4 sm:px-6 lg:px-8 ${className}`} data-oid="7vccy_n">
-        <div className="max-w-7xl mx-auto" data-oid="8gpj2-s">
+    <section id={id} className={`py-16 px-4 sm:px-6 lg:px-8 ${className}`} data-oid="yq7io9g">
+        <div className="max-w-7xl mx-auto" data-oid="_4himz3">
             {children}
         </div>
     </section>
 );
 
 const TestimonyCard: React.FC<TestimonyCardProps> = ({ name, story, verse }) => (
-    <div
-        className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-600 hover:shadow-xl transition-shadow duration-300"
-        data-oid="j5pcmkd"
-    >
-        <blockquote
-            className="text-gray-700 mb-6 italic text-lg leading-relaxed"
-            data-oid="eofuzs4"
-        >
-            "{story}"
-        </blockquote>
-        <div className="border-t pt-4" data-oid="1bk2901">
-            <p className="font-semibold text-blue-800 mb-2" data-oid="pcb9k86">
-                - {name}
-            </p>
-            <p className="text-sm text-blue-600 font-medium" data-oid="_n9h7ot">
-                "{verse}"
-            </p>
-        </div>
-    </div>
+    <Card className="bg-white/10 backdrop-blur-sm border border-white/20" data-oid="yqbwmo4">
+        <CardContent className="p-6" data-oid=".6_i-cr">
+            <blockquote
+                className="text-gray-700 mb-6 italic text-lg leading-relaxed"
+                data-oid="yrklvnc"
+            >
+                "{story}"
+            </blockquote>
+            <div className="border-t pt-4" data-oid=":k4:zz1">
+                <p className="font-semibold text-blue-800 mb-2" data-oid="k71zaeu">
+                    - {name}
+                </p>
+                <p className="text-sm text-blue-600 font-medium" data-oid="_u_sjo1">
+                    "{verse}"
+                </p>
+            </div>
+        </CardContent>
+    </Card>
 );
 
 export default function Page() {
@@ -121,33 +107,33 @@ export default function Page() {
     return (
         <div
             className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50"
-            data-oid="f:x93fr"
+            data-oid="f1dl67c"
         >
             {/* Navigation */}
             <nav
                 className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b border-blue-100"
-                data-oid="z5v9iek"
+                data-oid="wbu1h00"
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="9i5xp4p">
-                    <div className="flex justify-between items-center py-4" data-oid=":k7r11v">
-                        <div className="flex items-center space-x-3" data-oid="5z.dfvg">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="7k5s37b">
+                    <div className="flex justify-between items-center py-4" data-oid="ow19aab">
+                        <div className="flex items-center space-x-3" data-oid="la5vxjb">
                             <div
                                 className="w-10 h-10 bg-gradient-to-r from-blue-600 to-amber-500 rounded-full flex items-center justify-center"
-                                data-oid="yt:k17g"
+                                data-oid="ijo-.ds"
                             >
-                                <span className="text-white font-bold text-lg" data-oid="i6nj55e">
+                                <span className="text-white font-bold text-lg" data-oid="8.me165">
                                     ✝
                                 </span>
                             </div>
                             <h1
                                 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-amber-500 bg-clip-text text-transparent"
-                                data-oid="bapu7ew"
+                                data-oid="4o.ieei"
                             >
                                 The Real Freedom
                             </h1>
                         </div>
 
-                        <div className="hidden lg:flex space-x-8" data-oid="0joqrn.">
+                        <div className="hidden lg:flex space-x-8" data-oid="h:p4vsb">
                             {navigationItems.slice(0, 5).map((item) => (
                                 <button
                                     key={item.id}
@@ -157,27 +143,29 @@ export default function Page() {
                                             ? 'text-blue-600 border-b-2 border-blue-600'
                                             : 'text-gray-700'
                                     }`}
-                                    data-oid="7ch-8bh"
+                                    data-oid="z2gashr"
                                 >
                                     {item.label}
                                 </button>
                             ))}
                         </div>
 
-                        <div className="flex space-x-4" data-oid="39qts.r">
-                            <CTAButton
-                                text="Get Help"
-                                variant="primary"
+                        <div className="flex space-x-4" data-oid="qkyqse6">
+                            <Button
+                                variant="default"
                                 onClick={() => scrollToSection('help')}
-                                data-oid="58e0qp-"
-                            />
+                                data-oid="5ohy148"
+                            >
+                                Get Help
+                            </Button>
 
-                            <CTAButton
-                                text="Pray with Us"
+                            <Button
                                 variant="outline"
                                 onClick={() => scrollToSection('contact')}
-                                data-oid="rplguw1"
-                            />
+                                data-oid="qtays3u"
+                            >
+                                Pray with Us
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -187,41 +175,41 @@ export default function Page() {
             <Section
                 id="home"
                 className="pt-32 pb-20 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white"
-                data-oid="yb1fm:y"
+                data-oid=":quzb4r"
             >
                 <div
                     className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                    data-oid="3weqltx"
+                    data-oid="urave.."
                 >
                     <h1
                         className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-                        data-oid="8tjrh_:"
+                        data-oid="f_x7vkc"
                     >
-                        REAL Freedom <br data-oid=".w-1awy" />
-                        <span className="text-amber-300" data-oid="cq4vwia">
+                        REAL Freedom <br data-oid="yg4mzcc" />
+                        <span className="text-amber-300" data-oid="2o:z-mr">
                             Starts Here
                         </span>
                     </h1>
                     <p
                         className="text-xl md:text-2xl mb-4 text-blue-100 max-w-4xl mx-auto"
-                        data-oid="et13k8x"
+                        data-oid="g6a6:vd"
                     >
                         From Bondage to Breakthrough
                     </p>
                     <div
                         className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 max-w-4xl mx-auto border border-white/20"
-                        data-oid="7qv19hk"
+                        data-oid="xyqdw7."
                     >
                         <h2
                             className="text-3xl md:text-4xl font-bold mb-6 text-amber-300"
-                            data-oid="i9l7d4."
+                            data-oid="tr4rzwe"
                         >
                             You were made for more.
                         </h2>
-                        <p className="text-xl md:text-2xl mb-6" data-oid="gk:0:f1">
+                        <p className="text-xl md:text-2xl mb-6" data-oid="ayu_k9_">
                             You are not your addiction.
                         </p>
-                        <p className="text-lg text-blue-100 leading-relaxed" data-oid="_fgdp6s">
+                        <p className="text-lg text-blue-100 leading-relaxed" data-oid="ujvaqrb">
                             We're here to stand with the broken, to love the addicted, and to walk
                             with those who are ready to be free – really free.
                         </p>
@@ -229,54 +217,57 @@ export default function Page() {
 
                     <div
                         className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                        data-oid="lue908-"
+                        data-oid="7yyb6qz"
                     >
-                        <CTAButton
-                            text="Get Help"
+                        <Button
                             variant="secondary"
                             onClick={() => scrollToSection('help')}
-                            data-oid="x2ci:-7"
-                        />
+                            data-oid="y4pp4ke"
+                        >
+                            Get Help
+                        </Button>
 
-                        <CTAButton
-                            text="Join the Mission"
+                        <Button
                             variant="outline"
                             onClick={() => scrollToSection('get-involved')}
-                            data-oid="2xel:sl"
-                        />
+                            data-oid="jcjyjl:"
+                        >
+                            Join the Mission
+                        </Button>
 
-                        <CTAButton
-                            text="Pray with Us"
+                        <Button
                             variant="outline"
                             onClick={() => scrollToSection('contact')}
-                            data-oid="mm.7rj2"
-                        />
+                            data-oid="3cfxaj8"
+                        >
+                            Pray with Us
+                        </Button>
                     </div>
                 </div>
             </Section>
 
             {/* About Us Section */}
-            <Section id="about" className="bg-white" data-oid="5exowwv">
-                <div className="text-center mb-16" data-oid="j3vpg-b">
+            <Section id="about" className="bg-white" data-oid=":r.ukj6">
+                <div className="text-center mb-16" data-oid="4kjrk3k">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="jonv0ni"
+                        data-oid="k7gbnc-"
                     >
                         Our Story: Called to Set the{' '}
-                        <span className="text-blue-600" data-oid="zs2.yul">
+                        <span className="text-blue-600" data-oid="pme82be">
                             Captives Free
                         </span>
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center" data-oid="pzpuho0">
-                    <div data-oid="zwkg04a">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6" data-oid="hgvz:mo">
+                <div className="grid md:grid-cols-2 gap-12 items-center" data-oid="12l70p.">
+                    <div data-oid="vj:nmpu">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-6" data-oid="igr9b9z">
                             Our Mission
                         </h3>
                         <p
                             className="text-lg text-gray-600 mb-8 leading-relaxed"
-                            data-oid="goe617-"
+                            data-oid="5g:ldib"
                         >
                             We believe that true freedom comes only through Jesus Christ. Our
                             mission is to provide hope, healing, and restoration to those struggling
@@ -284,12 +275,12 @@ export default function Page() {
                             and truth.
                         </p>
 
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6" data-oid=":-jheiv">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-6" data-oid="qrqftrx">
                             Why "Real" Freedom?
                         </h3>
                         <p
                             className="text-lg text-gray-600 mb-8 leading-relaxed"
-                            data-oid="f1j:pj2"
+                            data-oid="fa50iln"
                         >
                             Because temporary solutions lead to temporary results. Real freedom
                             addresses the heart, not just the habit. It's freedom that lasts because
@@ -299,31 +290,31 @@ export default function Page() {
 
                     <div
                         className="bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-8 border border-blue-100"
-                        data-oid="k6328yq"
+                        data-oid="hng:jq1"
                     >
-                        <h3 className="text-2xl font-bold text-blue-800 mb-6" data-oid="a82h0f:">
+                        <h3 className="text-2xl font-bold text-blue-800 mb-6" data-oid="fvl0d22">
                             Foundational Scripture
                         </h3>
                         <blockquote
                             className="text-lg text-gray-700 mb-6 italic leading-relaxed"
-                            data-oid="olhk9gm"
+                            data-oid=":.rlcim"
                         >
                             "Look at the birds of the air; they do not sow or reap or store away in
                             barns, and yet your heavenly Father feeds them. Are you not much more
                             valuable than they?"
                         </blockquote>
-                        <p className="text-blue-600 font-semibold mb-8" data-oid="gcsgy36">
+                        <p className="text-blue-600 font-semibold mb-8" data-oid="d2fehl6">
                             - Matthew 6:26
                         </p>
 
-                        <div className="border-t border-blue-200 pt-6" data-oid="4j5craa">
+                        <div className="border-t border-blue-200 pt-6" data-oid="2zhrt29">
                             <blockquote
                                 className="text-xl font-bold text-blue-800 mb-4"
-                                data-oid="ilwj9pc"
+                                data-oid="jy0hpar"
                             >
                                 "If the Son sets you free, you will be free indeed."
                             </blockquote>
-                            <p className="text-blue-600 font-semibold" data-oid="bah-puv">
+                            <p className="text-blue-600 font-semibold" data-oid="ty.tr5o">
                                 - John 8:36
                             </p>
                         </div>
@@ -335,29 +326,29 @@ export default function Page() {
             <Section
                 id="gospel"
                 className="bg-gradient-to-r from-gray-50 to-blue-50"
-                data-oid="qs8ybe-"
+                data-oid="h-qd5.n"
             >
-                <div className="text-center mb-16" data-oid="dlqnav8">
+                <div className="text-center mb-16" data-oid="kgou5ed">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="4wnwit1"
+                        data-oid="pc1l3sh"
                     >
                         The Only Way Out Is{' '}
-                        <span className="text-blue-600" data-oid=".803pmr">
+                        <span className="text-blue-600" data-oid="szgb2is">
                             Through Him
                         </span>
                     </h2>
                 </div>
 
-                <div className="grid lg:grid-cols-3 gap-8 mb-16" data-oid="n6oclpr">
+                <div className="grid lg:grid-cols-3 gap-8 mb-16" data-oid="h_pck2t">
                     <div
                         className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-blue-600"
-                        data-oid="9p24o5-"
+                        data-oid="9l_7wtj"
                     >
-                        <h3 className="text-2xl font-bold text-blue-800 mb-4" data-oid="b4a-own">
+                        <h3 className="text-2xl font-bold text-blue-800 mb-4" data-oid="4sww5z-">
                             Why Is Addiction So Powerful?
                         </h3>
-                        <p className="text-gray-600 leading-relaxed" data-oid="mc_tgku">
+                        <p className="text-gray-600 leading-relaxed" data-oid="o5eeaja">
                             Addiction hijacks the very systems God designed for good - our reward
                             pathways, our need for connection, our desire for transcendence. It's a
                             spiritual battle that requires spiritual weapons.
@@ -366,12 +357,12 @@ export default function Page() {
 
                     <div
                         className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-amber-500"
-                        data-oid="yo-:6f:"
+                        data-oid="7j3oxdm"
                     >
-                        <h3 className="text-2xl font-bold text-amber-600 mb-4" data-oid="ae-j58t">
+                        <h3 className="text-2xl font-bold text-amber-600 mb-4" data-oid="00z-b3a">
                             Biblical Insights
                         </h3>
-                        <p className="text-gray-600 leading-relaxed" data-oid="j7l3dc-">
+                        <p className="text-gray-600 leading-relaxed" data-oid="3-xflqw">
                             God created by His Word and separated by His hands. In the same way, He
                             speaks freedom over our lives and actively works to separate us from
                             what binds us.
@@ -380,12 +371,12 @@ export default function Page() {
 
                     <div
                         className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-green-600"
-                        data-oid="6il3ndk"
+                        data-oid="1v5:su3"
                     >
-                        <h3 className="text-2xl font-bold text-green-600 mb-4" data-oid="7z1.x9d">
+                        <h3 className="text-2xl font-bold text-green-600 mb-4" data-oid="k_at.z5">
                             Total Freedom
                         </h3>
-                        <p className="text-gray-600 leading-relaxed" data-oid="i-c_kqw">
+                        <p className="text-gray-600 leading-relaxed" data-oid="rtn-46q">
                             Jesus didn't just die for our sins - He rose again to give us power over
                             them. His resurrection is our guarantee that no addiction is stronger
                             than His love.
@@ -395,68 +386,68 @@ export default function Page() {
 
                 <div
                     className="bg-white rounded-2xl shadow-xl p-12 border border-blue-100"
-                    data-oid="m238v2x"
+                    data-oid="_nw1.mg"
                 >
                     <h3
                         className="text-3xl font-bold text-center text-gray-800 mb-12"
-                        data-oid="wrr1i41"
+                        data-oid="8qr_56j"
                     >
                         Gospel Truths
                     </h3>
-                    <div className="grid md:grid-cols-3 gap-8" data-oid="m-4x6ze">
-                        <div className="text-center" data-oid="fqdb4q4">
+                    <div className="grid md:grid-cols-3 gap-8" data-oid="hrj1hur">
+                        <div className="text-center" data-oid="39a9c7m">
                             <div
                                 className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
-                                data-oid="u312c49"
+                                data-oid=":4yzgmv"
                             >
-                                <span className="text-white text-2xl font-bold" data-oid="z8kra27">
+                                <span className="text-white text-2xl font-bold" data-oid="-jh_qsf">
                                     1
                                 </span>
                             </div>
-                            <h4 className="text-xl font-bold text-blue-800 mb-3" data-oid="9fe4v7r">
+                            <h4 className="text-xl font-bold text-blue-800 mb-3" data-oid="2l:f50o">
                                 Jesus is the Way
                             </h4>
-                            <p className="text-gray-600" data-oid="qq7gpt9">
+                            <p className="text-gray-600" data-oid="xset:7y">
                                 Not a way, but THE way to freedom and life.
                             </p>
                         </div>
 
-                        <div className="text-center" data-oid="hi.uz3o">
+                        <div className="text-center" data-oid="uwoany.">
                             <div
                                 className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4"
-                                data-oid="o3na1wl"
+                                data-oid="agz2j.m"
                             >
-                                <span className="text-white text-2xl font-bold" data-oid="0i0pu:1">
+                                <span className="text-white text-2xl font-bold" data-oid="yf4bnpg">
                                     2
                                 </span>
                             </div>
                             <h4
                                 className="text-xl font-bold text-amber-600 mb-3"
-                                data-oid="xoo7vbt"
+                                data-oid="royhepy"
                             >
                                 Jesus is the Door
                             </h4>
-                            <p className="text-gray-600" data-oid="p6rcvvt">
+                            <p className="text-gray-600" data-oid="a7pttav">
                                 He opens the way to a new life and closes the door to bondage.
                             </p>
                         </div>
 
-                        <div className="text-center" data-oid="ki7ngqe">
+                        <div className="text-center" data-oid="ih:t1ys">
                             <div
                                 className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4"
-                                data-oid="hmggzp:"
+                                data-oid="tpiegdm"
                             >
-                                <span className="text-white text-2xl font-bold" data-oid="bi1iw8j">
+                                <span className="text-white text-2xl font-bold" data-oid="5qj5.e3">
                                     3
                                 </span>
                             </div>
                             <h4
                                 className="text-xl font-bold text-green-600 mb-3"
-                                data-oid="37s:ibo"
+                                data-oid="d5qb5i3"
                             >
                                 Jesus gives us Power
                             </h4>
-                            <p className="text-gray-600" data-oid="ccyjul2">
+                            <p className="text-gray-600" data-oid="knp66o8">
                                 The same power that raised Him from the dead lives in us.
                             </p>
                         </div>
@@ -464,11 +455,11 @@ export default function Page() {
 
                     <div
                         className="text-center mt-12 p-6 bg-gradient-to-r from-blue-50 to-amber-50 rounded-xl"
-                        data-oid="2tk7btw"
+                        data-oid="iir2ncq"
                     >
-                        <p className="text-2xl font-bold text-gray-800" data-oid=".bs0dmg">
+                        <p className="text-2xl font-bold text-gray-800" data-oid="2zkpeqj">
                             Religion gives rules.{' '}
-                            <span className="text-blue-600" data-oid="rr4b2_b">
+                            <span className="text-blue-600" data-oid="0zrf8nm">
                                 Jesus gives restoration.
                             </span>
                         </p>
@@ -477,24 +468,24 @@ export default function Page() {
             </Section>
 
             {/* Help & Hope Section */}
-            <Section id="help" className="bg-white" data-oid="r3nlnpj">
-                <div className="text-center mb-16" data-oid="kzd361e">
+            <Section id="help" className="bg-white" data-oid="ysitwbn">
+                <div className="text-center mb-16" data-oid="lruhvw0">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="k8kegmq"
+                        data-oid="i8-4stj"
                     >
                         Struggling?{' '}
-                        <span className="text-blue-600" data-oid="l0fml6g">
+                        <span className="text-blue-600" data-oid="4nzr8:f">
                             You're Not Alone.
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="you6b41">
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid=":xwiof5">
                         Whether you're fighting addiction yourself or supporting someone who is,
                         we're here to walk with you every step of the way.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" data-oid="v1-or0r">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" data-oid="_mr_9nf">
                     {[
                         {
                             title: "What to do if you're addicted",
@@ -531,104 +522,107 @@ export default function Page() {
                             icon: '🙏',
                         },
                     ].map((item, index) => (
-                        <div
+                        <Card
                             key={index}
-                            className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-blue-100"
-                            data-oid="-7q.2gs"
+                            className="hover:shadow-lg transition-shadow duration-300"
+                            data-oid="1grt_zh"
                         >
-                            <div className="text-4xl mb-4" data-oid="d_iqcdy">
-                                {item.icon}
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-800 mb-4" data-oid="8uixp8p">
-                                {item.title}
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed" data-oid="3p3t.md">
-                                {item.description}
-                            </p>
-                        </div>
+                            <CardHeader data-oid="-p.gri2">
+                                <div className="text-4xl mb-4" data-oid="ttqh-xw">
+                                    {item.icon}
+                                </div>
+                                <CardTitle
+                                    className="text-xl font-bold text-gray-800"
+                                    data-oid="t280mct"
+                                >
+                                    {item.title}
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent data-oid="mmkjn1l">
+                                <p className="text-gray-600 leading-relaxed" data-oid="juekpy6">
+                                    {item.description}
+                                </p>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
 
-                <div className="text-center" data-oid="mjr-nn8">
+                <div className="text-center" data-oid="tet8ik2">
                     <div
                         className="flex flex-col sm:flex-row gap-6 justify-center"
-                        data-oid="xmeohbl"
+                        data-oid="5cwqjtc"
                     >
-                        <CTAButton
-                            text="Talk to Someone Now"
-                            variant="primary"
-                            data-oid="xbg64nk"
-                        />
+                        <Button variant="default" data-oid="tfod2go">
+                            Talk to Someone Now
+                        </Button>
 
-                        <CTAButton
-                            text="Join a Support Group"
-                            variant="secondary"
-                            data-oid="rxj.sz3"
-                        />
+                        <Button variant="secondary" data-oid="y3szq_b">
+                            Join a Support Group
+                        </Button>
                     </div>
                 </div>
             </Section>
 
             {/* Testimonies Section */}
-            <Section className="bg-gradient-to-r from-gray-50 to-blue-50" data-oid="xfyb_80">
-                <div className="text-center mb-16" data-oid="rz4czo_">
+            <Section className="bg-gradient-to-r from-gray-50 to-blue-50" data-oid="o52bcly">
+                <div className="text-center mb-16" data-oid=".b99uch">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="2q50y40"
+                        data-oid="lsbey0s"
                     >
                         Stories of{' '}
-                        <span className="text-blue-600" data-oid="fivp3in">
+                        <span className="text-blue-600" data-oid="iplvfdl">
                             Real Freedom
                         </span>
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid="34:tevd">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-oid="t:3jvqd">
                     <TestimonyCard
                         name="Sarah M."
                         story="I was trapped in addiction for 15 years. Through The Real Freedom ministry, I found not just sobriety, but true freedom in Christ. Today, I'm 3 years clean and helping others find the same hope."
                         verse="He has sent me to bind up the brokenhearted, to proclaim freedom for the captives - Isaiah 61:1"
-                        data-oid="lncmt86"
+                        data-oid="0w8krqs"
                     />
 
                     <TestimonyCard
                         name="Michael R."
                         story="As a pastor, I felt ashamed of my struggle with addiction. This ministry showed me that even shepherds need healing. Now I lead with authenticity and help other leaders find freedom."
                         verse="My grace is sufficient for you, for my power is made perfect in weakness - 2 Corinthians 12:9"
-                        data-oid="hceloul"
+                        data-oid="eau_i2f"
                     />
 
                     <TestimonyCard
                         name="Jennifer L."
                         story="Watching my husband struggle with addiction nearly destroyed our family. Through their family support program, we learned how to love without enabling and found healing for our entire family."
                         verse="And we know that in all things God works for the good of those who love him - Romans 8:28"
-                        data-oid="e9lnhrg"
+                        data-oid="hvs1ufs"
                     />
                 </div>
             </Section>
 
             {/* Equip the Church Section */}
-            <Section id="equip" className="bg-white" data-oid="to8slf4">
-                <div className="text-center mb-16" data-oid="nnmormb">
+            <Section id="equip" className="bg-white" data-oid="4_jk8t8">
+                <div className="text-center mb-16" data-oid="h4:r_.j">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="tpn8qfa"
+                        data-oid="smn8kyn"
                     >
                         Training the Shepherds to{' '}
-                        <span className="text-blue-600" data-oid="k9t:4gw">
+                        <span className="text-blue-600" data-oid="jh:1acq">
                             Heal the Sheep
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="8bndhic">
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="fkdr62y">
                         Equipping pastors and church leaders with the tools, training, and biblical
                         foundation needed to minister effectively to those struggling with
                         addiction.
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-center" data-oid="t92etl6">
-                    <div data-oid="6v19lwr">
-                        <div className="space-y-8" data-oid="x60bzd.">
+                <div className="grid lg:grid-cols-2 gap-12 items-center" data-oid="zy08bvo">
+                    <div data-oid="bi1c7ak">
+                        <div className="space-y-8" data-oid="8xiser.">
                             {[
                                 {
                                     title: 'Certification Programs',
@@ -654,27 +648,27 @@ export default function Page() {
                                 <div
                                     key={index}
                                     className="flex items-start space-x-4"
-                                    data-oid="cya6hot"
+                                    data-oid="a3xes6c"
                                 >
                                     <div
                                         className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
-                                        data-oid="8sr_fj:"
+                                        data-oid="h11g897"
                                     >
                                         <span
                                             className="text-white text-sm font-bold"
-                                            data-oid="u94n8sd"
+                                            data-oid="m3mv0dm"
                                         >
                                             ✓
                                         </span>
                                     </div>
-                                    <div data-oid="42iv9ko">
+                                    <div data-oid="xjju9-g">
                                         <h3
                                             className="text-xl font-bold text-gray-800 mb-2"
-                                            data-oid="flktnpi"
+                                            data-oid="z_uckkl"
                                         >
                                             {item.title}
                                         </h3>
-                                        <p className="text-gray-600" data-oid="bxtyscb">
+                                        <p className="text-gray-600" data-oid="6i9ciwa">
                                             {item.description}
                                         </p>
                                     </div>
@@ -685,55 +679,55 @@ export default function Page() {
 
                     <div
                         className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 text-white"
-                        data-oid="jvsgbuu"
+                        data-oid="9.hqz2u"
                     >
-                        <h3 className="text-2xl font-bold mb-6" data-oid="ujt.swv">
+                        <h3 className="text-2xl font-bold mb-6" data-oid="tas:ge.">
                             Become a Freedom Pastor
                         </h3>
-                        <p className="text-blue-100 mb-8 leading-relaxed" data-oid="1c5_qb3">
+                        <p className="text-blue-100 mb-8 leading-relaxed" data-oid="ql6166n">
                             Join a growing network of pastors and leaders who are making a real
                             difference in their communities. Get certified, access exclusive
                             resources, and connect with like-minded ministers.
                         </p>
-                        <div className="space-y-4" data-oid="wq5guyw">
-                            <div className="flex items-center space-x-3" data-oid="44jytgu">
-                                <span className="text-amber-300" data-oid="nu396e7">
+                        <div className="space-y-4" data-oid="wt5vw2d">
+                            <div className="flex items-center space-x-3" data-oid="zl2gopi">
+                                <span className="text-amber-300" data-oid=":_hn4zm">
                                     📚
                                 </span>
-                                <span data-oid="7wh38t_">Comprehensive training materials</span>
+                                <span data-oid="phd569p">Comprehensive training materials</span>
                             </div>
-                            <div className="flex items-center space-x-3" data-oid=":dk7qp7">
-                                <span className="text-amber-300" data-oid="oi-k1gz">
+                            <div className="flex items-center space-x-3" data-oid="xrtyg2t">
+                                <span className="text-amber-300" data-oid="o03ft8m">
                                     🤝
                                 </span>
-                                <span data-oid="ii_tr0m">Ongoing mentorship and support</span>
+                                <span data-oid="cgi:2k9">Ongoing mentorship and support</span>
                             </div>
-                            <div className="flex items-center space-x-3" data-oid="jke0uio">
-                                <span className="text-amber-300" data-oid="7lf1-8d">
+                            <div className="flex items-center space-x-3" data-oid="iuc1a_v">
+                                <span className="text-amber-300" data-oid="th17a9v">
                                     🌐
                                 </span>
-                                <span data-oid="lvcggo_">Access to exclusive pastor network</span>
+                                <span data-oid="qk8b:s1">Access to exclusive pastor network</span>
                             </div>
-                            <div className="flex items-center space-x-3" data-oid="h695:3v">
-                                <span className="text-amber-300" data-oid="y6mpihn">
+                            <div className="flex items-center space-x-3" data-oid="dpt7i2f">
+                                <span className="text-amber-300" data-oid="68_20:h">
                                     📖
                                 </span>
-                                <span data-oid="5bm3umz">Free downloadable resources</span>
+                                <span data-oid="dr1knnn">Free downloadable resources</span>
                             </div>
                         </div>
-                        <div className="mt-8 flex flex-col sm:flex-row gap-4" data-oid="y:2_z7t">
-                            <button
+                        <div className="mt-8 flex flex-col sm:flex-row gap-4" data-oid="yose:50">
+                            <Button
                                 className="bg-amber-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors"
-                                data-oid="9_zv1lv"
+                                data-oid="w15y7rk"
                             >
                                 Become a Freedom Pastor
-                            </button>
-                            <button
+                            </Button>
+                            <Button
                                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-800 transition-colors"
-                                data-oid="oj3tatf"
+                                data-oid="vhkwe15"
                             >
                                 Download Materials
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -743,106 +737,122 @@ export default function Page() {
             <Section
                 id="awareness"
                 className="bg-gradient-to-r from-red-50 to-orange-50"
-                data-oid="mpvdiva"
+                data-oid="e8rrydp"
             >
-                <div className="text-center mb-16" data-oid="hncsace">
+                <div className="text-center mb-16" data-oid="38enzoa">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="t:7i87t"
+                        data-oid="x:0c4mt"
                     >
                         Let's Talk About{' '}
-                        <span className="text-red-600" data-oid="4sgmtdc">
+                        <span className="text-red-600" data-oid="gpmnxdn">
                             the First Time
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="6rb2r06">
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="lffm:ec">
                         Prevention is always better than treatment. Let's educate our communities
                         about the real risks of first-time substance use.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-16" data-oid="8kl6bf-">
-                    <div
+                <div className="grid md:grid-cols-2 gap-12 items-center mb-16" data-oid="1grh8jj">
+                    <Card
                         className="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-red-600"
-                        data-oid="lx6_do0"
+                        data-oid="q_-:m_y"
                     >
-                        <h3 className="text-3xl font-bold text-red-600 mb-6" data-oid="avnzfvz">
-                            Shocking Statistics
-                        </h3>
-                        <div className="space-y-6" data-oid="q0css:c">
-                            <div className="flex items-center space-x-4" data-oid="m3t509j">
-                                <div
-                                    className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center"
-                                    data-oid="_35tio:"
-                                >
-                                    <span
-                                        className="text-2xl font-bold text-red-600"
-                                        data-oid="xdoa4ry"
+                        <CardHeader data-oid="d14cal1">
+                            <CardTitle
+                                className="text-3xl font-bold text-red-600"
+                                data-oid="wkcqi_i"
+                            >
+                                Shocking Statistics
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent data-oid="4dyxett">
+                            <div className="space-y-6" data-oid="jz16z1k">
+                                <div className="flex items-center space-x-4" data-oid="0vf6v--">
+                                    <div
+                                        className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center"
+                                        data-oid="3.1lm8m"
                                     >
-                                        75%
-                                    </span>
+                                        <span
+                                            className="text-2xl font-bold text-red-600"
+                                            data-oid="c4imanp"
+                                        >
+                                            75%
+                                        </span>
+                                    </div>
+                                    <div data-oid="ae_n20_">
+                                        <p
+                                            className="font-semibold text-gray-800"
+                                            data-oid="22mm1ps"
+                                        >
+                                            of first-time users
+                                        </p>
+                                        <p className="text-gray-600" data-oid="_59w5gq">
+                                            develop addiction patterns
+                                        </p>
+                                    </div>
                                 </div>
-                                <div data-oid="o3wt9j.">
-                                    <p className="font-semibold text-gray-800" data-oid="qhtub13">
-                                        of first-time users
-                                    </p>
-                                    <p className="text-gray-600" data-oid="uy7h.p3">
-                                        develop addiction patterns
-                                    </p>
+
+                                <div className="flex items-center space-x-4" data-oid="o6dxctg">
+                                    <div
+                                        className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center"
+                                        data-oid="ntx1og7"
+                                    >
+                                        <span
+                                            className="text-2xl font-bold text-orange-600"
+                                            data-oid="g6no:j-"
+                                        >
+                                            1x
+                                        </span>
+                                    </div>
+                                    <div data-oid="g87tx:v">
+                                        <p
+                                            className="font-semibold text-gray-800"
+                                            data-oid="2uf8shn"
+                                        >
+                                            One time is all it takes
+                                        </p>
+                                        <p className="text-gray-600" data-oid="3gv5d9c">
+                                            for some substances to create dependency
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center space-x-4" data-oid="-1jogiu">
+                                    <div
+                                        className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center"
+                                        data-oid="jw9xwzo"
+                                    >
+                                        <span
+                                            className="text-2xl font-bold text-yellow-600"
+                                            data-oid="e-l:49r"
+                                        >
+                                            90%
+                                        </span>
+                                    </div>
+                                    <div data-oid="qbo12.r">
+                                        <p
+                                            className="font-semibold text-gray-800"
+                                            data-oid="0ski3g7"
+                                        >
+                                            of addictions begin
+                                        </p>
+                                        <p className="text-gray-600" data-oid="_fr8-mb">
+                                            before age 18
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                        </CardContent>
+                    </Card>
 
-                            <div className="flex items-center space-x-4" data-oid="cr0tx2c">
-                                <div
-                                    className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center"
-                                    data-oid="4l4fb7x"
-                                >
-                                    <span
-                                        className="text-2xl font-bold text-orange-600"
-                                        data-oid="n56cn_b"
-                                    >
-                                        1x
-                                    </span>
-                                </div>
-                                <div data-oid="f4okeg_">
-                                    <p className="font-semibold text-gray-800" data-oid="ujs-j5j">
-                                        One time is all it takes
-                                    </p>
-                                    <p className="text-gray-600" data-oid="hf2g.u-">
-                                        for some substances to create dependency
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center space-x-4" data-oid="38vburz">
-                                <div
-                                    className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center"
-                                    data-oid="vzpi35u"
-                                >
-                                    <span
-                                        className="text-2xl font-bold text-yellow-600"
-                                        data-oid="sua_dgi"
-                                    >
-                                        90%
-                                    </span>
-                                </div>
-                                <div data-oid="jxx04f:">
-                                    <p className="font-semibold text-gray-800" data-oid="btf3y4c">
-                                        of addictions begin
-                                    </p>
-                                    <p className="text-gray-600" data-oid="j.i777_">
-                                        before age 18
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div data-oid="01v1h91">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-6" data-oid="c39z2_d">
+                    <div data-oid="za5gzp.">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-6" data-oid="6wn.ey-">
                             Prevention Tools Available
                         </h3>
-                        <div className="grid grid-cols-2 gap-4" data-oid="1ze8.7b">
+                        <div className="grid grid-cols-2 gap-4" data-oid="nz_k788">
                             {[
                                 {
                                     icon: '🎭',
@@ -865,24 +875,28 @@ export default function Page() {
                                     desc: 'Complete educational packages',
                                 },
                             ].map((tool, index) => (
-                                <div
+                                <Card
                                     key={index}
                                     className="bg-white rounded-lg p-4 shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
-                                    data-oid="tphd1db"
+                                    data-oid="89ejge0"
                                 >
-                                    <div className="text-2xl mb-2" data-oid="pc5eetm">
-                                        {tool.icon}
-                                    </div>
-                                    <h4
-                                        className="font-semibold text-gray-800 mb-1"
-                                        data-oid="-qsw.ge"
-                                    >
-                                        {tool.title}
-                                    </h4>
-                                    <p className="text-sm text-gray-600" data-oid="29cuoue">
-                                        {tool.desc}
-                                    </p>
-                                </div>
+                                    <CardHeader data-oid="easp-c:">
+                                        <div className="text-2xl mb-2" data-oid="cviw2dh">
+                                            {tool.icon}
+                                        </div>
+                                        <CardTitle
+                                            className="font-semibold text-gray-800"
+                                            data-oid="gyikkq8"
+                                        >
+                                            {tool.title}
+                                        </CardTitle>
+                                    </CardHeader>
+                                    <CardContent data-oid="ur.qdiy">
+                                        <p className="text-gray-600" data-oid="rynpz9u">
+                                            {tool.desc}
+                                        </p>
+                                    </CardContent>
+                                </Card>
                             ))}
                         </div>
                     </div>
@@ -890,32 +904,32 @@ export default function Page() {
             </Section>
 
             {/* Love, Not Shame Section */}
-            <Section id="love" className="bg-white" data-oid=".smy6i.">
-                <div className="text-center mb-16" data-oid="4d:j9.o">
+            <Section id="love" className="bg-white" data-oid="9npgbof">
+                <div className="text-center mb-16" data-oid="tif-0:i">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="n74kgbb"
+                        data-oid="o8hjjue"
                     >
-                        We Don't Shame the Addicted. <br data-oid="5ou4_da" />
-                        <span className="text-green-600" data-oid="1zi5ri1">
+                        We Don't Shame the Addicted. <br data-oid="w-0v39v" />
+                        <span className="text-green-600" data-oid="hbk0nw6">
                             We Stand With Them.
                         </span>
                     </h2>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-center" data-oid="yk6yrt.">
-                    <div className="space-y-8" data-oid="q5nyfse">
+                <div className="grid lg:grid-cols-2 gap-12 items-center" data-oid="n..h9b6">
+                    <div className="space-y-8" data-oid="lphcxt.">
                         <div
                             className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600"
-                            data-oid="iu92q-m"
+                            data-oid="n4m1p.g"
                         >
                             <h3
                                 className="text-xl font-bold text-green-800 mb-3"
-                                data-oid="an94_fo"
+                                data-oid="q535s4c"
                             >
                                 Addiction = Illness, not Weakness
                             </h3>
-                            <p className="text-gray-700" data-oid="2_z4nv2">
+                            <p className="text-gray-700" data-oid="6f5rrl7">
                                 We recognize addiction as a complex condition that affects the
                                 brain, body, and spirit. It's not a moral failing or lack of
                                 willpower.
@@ -924,12 +938,12 @@ export default function Page() {
 
                         <div
                             className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600"
-                            data-oid="9xxl:q4"
+                            data-oid="jj85iei"
                         >
-                            <h3 className="text-xl font-bold text-blue-800 mb-3" data-oid="umkrdpm">
+                            <h3 className="text-xl font-bold text-blue-800 mb-3" data-oid="qz:166v">
                                 Respect in Conversations
                             </h3>
-                            <p className="text-gray-700" data-oid="9-1p094">
+                            <p className="text-gray-700" data-oid="shra062">
                                 We choose our words carefully, speaking truth in love and
                                 maintaining the dignity of every person we serve.
                             </p>
@@ -937,15 +951,15 @@ export default function Page() {
 
                         <div
                             className="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-600"
-                            data-oid="zdsc8rv"
+                            data-oid="ucpgyqk"
                         >
                             <h3
                                 className="text-xl font-bold text-purple-800 mb-3"
-                                data-oid="8uica:y"
+                                data-oid="ynt1fnw"
                             >
                                 Christlike Compassion
                             </h3>
-                            <p className="text-gray-700" data-oid=".322jhe">
+                            <p className="text-gray-700" data-oid="y0oe-7p">
                                 Following Jesus's example, we meet people where they are with
                                 unconditional love and practical support.
                             </p>
@@ -954,23 +968,23 @@ export default function Page() {
 
                     <div
                         className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 text-white"
-                        data-oid="15ws.oa"
+                        data-oid="arto2fw"
                     >
-                        <h3 className="text-2xl font-bold mb-6 text-amber-300" data-oid="gxb1irx">
+                        <h3 className="text-2xl font-bold mb-6 text-amber-300" data-oid="93ot-y-">
                             Accountability for Influencers
                         </h3>
                         <blockquote
                             className="text-lg italic mb-6 text-gray-300"
-                            data-oid="rf:ljd2"
+                            data-oid="tnn56bx"
                         >
                             "If anyone causes one of these little ones—those who believe in me—to
                             stumble, it would be better for them to have a large millstone hung
                             around their neck and to be drowned in the depths of the sea."
                         </blockquote>
-                        <p className="text-amber-300 font-semibold mb-6" data-oid="i.s1dya">
+                        <p className="text-amber-300 font-semibold mb-6" data-oid="tzj4qq6">
                             - Matthew 18:6
                         </p>
-                        <p className="text-gray-300 leading-relaxed" data-oid="k71x7p:">
+                        <p className="text-gray-300 leading-relaxed" data-oid="05qdrr-">
                             We believe those in positions of influence have a special responsibility
                             to protect the vulnerable. This includes speaking out against the
                             normalization of substance abuse in media, music, and culture.
@@ -983,25 +997,25 @@ export default function Page() {
             <Section
                 id="mental-health"
                 className="bg-gradient-to-r from-indigo-50 to-purple-50"
-                data-oid="m69s4g5"
+                data-oid="pwid1k4"
             >
-                <div className="text-center mb-16" data-oid="7_auxd9">
+                <div className="text-center mb-16" data-oid="4g7tv6c">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="4h19rfo"
+                        data-oid="u0-xbuu"
                     >
                         Into the Light:{' '}
-                        <span className="text-indigo-600" data-oid="12nra6b">
+                        <span className="text-indigo-600" data-oid="724u6ta">
                             Understanding Depression
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="klvy:g6">
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="u29y2h-">
                         Depression and addiction often go hand in hand. We address both with
                         compassion, understanding, and biblical truth.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16" data-oid="g4q6atj">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16" data-oid="rbsxw0b">
                     {[
                         {
                             title: 'Defining Depression',
@@ -1031,50 +1045,55 @@ export default function Page() {
                             color: 'green',
                         },
                     ].map((item, index) => (
-                        <div
+                        <Card
                             key={index}
                             className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-                            data-oid="rqullmo"
+                            data-oid="n88eurh"
                         >
-                            <div className="text-3xl mb-4" data-oid="_tuu2_k">
-                                {item.icon}
-                            </div>
-                            <h3
-                                className={`text-lg font-bold text-${item.color}-600 mb-3`}
-                                data-oid="hd957.u"
-                            >
-                                {item.title}
-                            </h3>
-                            <p className="text-gray-600 text-sm leading-relaxed" data-oid="tmr-cke">
-                                {item.description}
-                            </p>
-                        </div>
+                            <CardHeader data-oid="x-:jvgc">
+                                <div className="text-3xl mb-4" data-oid="e9468:e">
+                                    {item.icon}
+                                </div>
+                                <CardTitle
+                                    className={`text-lg font-bold text-${item.color}-600 mb-3`}
+                                    data-oid="yohmvqy"
+                                >
+                                    {item.title}
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent data-oid="sqo:wom">
+                                <p
+                                    className="text-gray-600 text-sm leading-relaxed"
+                                    data-oid="mzgxy.s"
+                                >
+                                    {item.description}
+                                </p>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
 
                 <div
                     className="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100"
-                    data-oid="1w8fmm4"
+                    data-oid="60:3sxf"
                 >
                     <h3
                         className="text-2xl font-bold text-center text-gray-800 mb-8"
-                        data-oid="rvd.1-s"
+                        data-oid="4otnk3w"
                     >
                         Expert Network
                     </h3>
                     <p
                         className="text-center text-gray-600 mb-8 max-w-3xl mx-auto"
-                        data-oid="hag:5.y"
+                        data-oid="fnc2hkj"
                     >
                         We partner with licensed Christian therapists, psychiatrists, and counselors
                         who understand both the clinical and spiritual dimensions of mental health.
                     </p>
-                    <div className="text-center" data-oid="hxj-rf:">
-                        <CTAButton
-                            text="Find a Christian Therapist"
-                            variant="primary"
-                            data-oid="yrgdv:m"
-                        />
+                    <div className="text-center" data-oid="9wvcu66">
+                        <Button variant="default" data-oid="_g1dw-w">
+                            Find a Christian Therapist
+                        </Button>
                     </div>
                 </div>
             </Section>
@@ -1083,25 +1102,25 @@ export default function Page() {
             <Section
                 id="get-involved"
                 className="bg-gradient-to-r from-amber-50 to-orange-50"
-                data-oid="1x2l9ar"
+                data-oid="kchq5l2"
             >
-                <div className="text-center mb-16" data-oid="2-7-lhj">
+                <div className="text-center mb-16" data-oid="atb:.gx">
                     <h2
                         className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
-                        data-oid="d6y2oyn"
+                        data-oid="tq9j:_z"
                     >
                         Partner With{' '}
-                        <span className="text-amber-600" data-oid="_8f8sum">
+                        <span className="text-amber-600" data-oid="xhic32.">
                             Purpose
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="cw75iha">
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-oid="2w7jiaj">
                         There are many ways to join God's work of setting the captives free. Find
                         your place in this mission.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" data-oid="862v.lx">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" data-oid="asojorh">
                     {[
                         {
                             title: 'Volunteer',
@@ -1146,44 +1165,49 @@ export default function Page() {
                             action: 'Give Monthly',
                         },
                     ].map((item, index) => (
-                        <div
+                        <Card
                             key={index}
                             className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-105"
-                            data-oid="u1kuhiv"
+                            data-oid="7k84093"
                         >
-                            <div className="text-4xl mb-4" data-oid="yp65u1y">
-                                {item.icon}
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-800 mb-4" data-oid="oqtba:5">
-                                {item.title}
-                            </h3>
-                            <p className="text-gray-600 mb-6 leading-relaxed" data-oid="0.acgk_">
-                                {item.description}
-                            </p>
-                            <button
-                                className="w-full bg-amber-500 text-white py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors"
-                                data-oid="-4lqvxq"
-                            >
-                                {item.action}
-                            </button>
-                        </div>
+                            <CardHeader data-oid="hhndphy">
+                                <div className="text-4xl mb-4" data-oid="8kdif-4">
+                                    {item.icon}
+                                </div>
+                                <CardTitle
+                                    className="text-xl font-bold text-gray-800"
+                                    data-oid="8639366"
+                                >
+                                    {item.title}
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent data-oid="5yr0.oj">
+                                <p
+                                    className="text-gray-600 mb-6 leading-relaxed"
+                                    data-oid="9lpfrm8"
+                                >
+                                    {item.description}
+                                </p>
+                                <Button variant="default" data-oid=":b37c0_">
+                                    {item.action}
+                                </Button>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
 
-                <div className="text-center bg-white rounded-2xl shadow-xl p-8" data-oid="ao6df3u">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4" data-oid="5d-zn1r">
+                <div className="text-center bg-white rounded-2xl shadow-xl p-8" data-oid="1knkg18">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4" data-oid="w3jm1j-">
                         Ready to Make a Difference?
                     </h3>
-                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto" data-oid="9_:hrz-">
+                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto" data-oid="2au5b:s">
                         Every person who finds freedom through this ministry is a victory worth
                         celebrating. Your involvement, no matter how big or small, makes an eternal
                         difference.
                     </p>
-                    <CTAButton
-                        text="Become a Freedom Partner"
-                        variant="primary"
-                        data-oid="6gtdhc4"
-                    />
+                    <Button variant="default" data-oid="asedqa9">
+                        Become a Freedom Partner
+                    </Button>
                 </div>
             </Section>
 
@@ -1191,27 +1215,27 @@ export default function Page() {
             <Section
                 id="contact"
                 className="bg-gradient-to-r from-blue-600 to-blue-800 text-white"
-                data-oid="qvs7:.d"
+                data-oid="6-4lqxj"
             >
-                <div className="text-center mb-16" data-oid="320o6mt">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6" data-oid="yzyaqvj">
+                <div className="text-center mb-16" data-oid="ycvxmsi">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6" data-oid="dymm9v6">
                         Ready to Take the{' '}
-                        <span className="text-amber-300" data-oid="u1cl8hm">
+                        <span className="text-amber-300" data-oid="smeybc1">
                             Next Step?
                         </span>
                     </h2>
-                    <p className="text-xl text-blue-100 max-w-3xl mx-auto" data-oid=":g.hc5c">
+                    <p className="text-xl text-blue-100 max-w-3xl mx-auto" data-oid="t1__ysr">
                         Whether you need help, want to volunteer, or have a testimony to share,
                         we're here for you.
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12" data-oid="al:edwu">
-                    <div data-oid=".czu82z">
-                        <h3 className="text-2xl font-bold mb-8 text-amber-300" data-oid="4qcavn8">
+                <div className="grid lg:grid-cols-2 gap-12" data-oid="tk.0ycx">
+                    <div data-oid="26pkjaz">
+                        <h3 className="text-2xl font-bold mb-8 text-amber-300" data-oid=":wx75ho">
                             How Can We Help You?
                         </h3>
-                        <div className="space-y-4" data-oid=".e97ajw">
+                        <div className="space-y-4" data-oid="rblqz6n">
                             {[
                                 {
                                     icon: '🆘',
@@ -1232,192 +1256,203 @@ export default function Page() {
                                 },
                                 { icon: '🙏', text: 'I need prayer', color: 'bg-pink-500' },
                             ].map((option, index) => (
-                                <button
+                                <Button
                                     key={index}
-                                    className="w-full flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-colors border border-white/20"
-                                    data-oid="l3u2vet"
+                                    className={`w-full flex items-center space-x-4 ${option.color} rounded-lg p-4 hover:bg-white/20 transition-colors border border-white/20`}
+                                    data-oid="7e-bxjx"
                                 >
                                     <div
                                         className={`w-12 h-12 ${option.color} rounded-full flex items-center justify-center text-xl`}
-                                        data-oid=":6mc3tl"
+                                        data-oid="xq1lrrf"
                                     >
                                         {option.icon}
                                     </div>
-                                    <span className="text-lg font-medium" data-oid="3h5k1kc">
+                                    <span className="text-lg font-medium" data-oid="b:4x29h">
                                         {option.text}
                                     </span>
-                                </button>
+                                </Button>
                             ))}
                         </div>
                     </div>
 
-                    <div
+                    <Card
                         className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
-                        data-oid="q-blc.r"
+                        data-oid="qnzauva"
                     >
-                        <h3 className="text-2xl font-bold mb-6 text-amber-300" data-oid="9_sl-ro">
-                            Get in Touch
-                        </h3>
-                        <form className="space-y-6" data-oid="_d5cdgm">
-                            <div data-oid="nd_sfor">
-                                <label
-                                    className="block text-sm font-medium mb-2"
-                                    data-oid="h1h.vrl"
-                                >
-                                    Name
-                                </label>
-                                <input
-                                    type="text"
-                                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                                    placeholder="Your full name"
-                                    data-oid="u-k1gho"
-                                />
-                            </div>
-
-                            <div data-oid="_sorl3u">
-                                <label
-                                    className="block text-sm font-medium mb-2"
-                                    data-oid="jsf7lo1"
-                                >
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                                    placeholder="your.email@example.com"
-                                    data-oid="zugvumk"
-                                />
-                            </div>
-
-                            <div data-oid="wps6bk_">
-                                <label
-                                    className="block text-sm font-medium mb-2"
-                                    data-oid="c4u7zoj"
-                                >
-                                    Phone (Optional)
-                                </label>
-                                <input
-                                    type="tel"
-                                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                                    placeholder="(555) 123-4567"
-                                    data-oid="1ek1lz7"
-                                />
-                            </div>
-
-                            <div data-oid="yjohd_d">
-                                <label
-                                    className="block text-sm font-medium mb-2"
-                                    data-oid="2i8cawp"
-                                >
-                                    How can we help?
-                                </label>
-                                <select
-                                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-amber-300"
-                                    data-oid="nm17ey6"
-                                >
-                                    <option value="" data-oid="mpdyn7n">
-                                        Select an option
-                                    </option>
-                                    <option value="help" data-oid=".i9wsy7">
-                                        I need help
-                                    </option>
-                                    <option value="volunteer" data-oid="23fxt9l">
-                                        I want to volunteer
-                                    </option>
-                                    <option value="donate" data-oid="h43mh__">
-                                        I want to donate
-                                    </option>
-                                    <option value="testimony" data-oid="d3tu-uz">
-                                        I have a testimony
-                                    </option>
-                                    <option value="church" data-oid="ot9q2:3">
-                                        Church partnership
-                                    </option>
-                                    <option value="prayer" data-oid="5.mncki">
-                                        Prayer request
-                                    </option>
-                                </select>
-                            </div>
-
-                            <div data-oid="j:n0bxm">
-                                <label
-                                    className="block text-sm font-medium mb-2"
-                                    data-oid="8i9p_3p"
-                                >
-                                    Message
-                                </label>
-                                <textarea
-                                    rows={4}
-                                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-300"
-                                    placeholder="Tell us more about how we can help..."
-                                    data-oid="mpy45lw"
-                                ></textarea>
-                            </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-amber-500 text-white py-4 rounded-lg font-semibold text-lg hover:bg-amber-600 transition-colors focus:outline-none focus:ring-4 focus:ring-amber-300"
-                                data-oid="dtk5-tp"
+                        <CardHeader data-oid="lzyw::r">
+                            <CardTitle
+                                className="text-2xl font-bold mb-6 text-amber-300"
+                                data-oid="i3oc_pz"
                             >
-                                Send Message
-                            </button>
-                        </form>
+                                Get in Touch
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent data-oid="iyw.rdo">
+                            <form className="space-y-6" data-oid="gh6hag-">
+                                <div data-oid="-ys85a:">
+                                    <label
+                                        className="block text-sm font-medium mb-2"
+                                        data-oid="qj.-gip"
+                                    >
+                                        Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                                        placeholder="Your full name"
+                                        data-oid="j.7qc5m"
+                                    />
+                                </div>
 
-                        <div className="mt-8 pt-8 border-t border-white/20" data-oid="1etln9_">
-                            <h4 className="font-semibold mb-4" data-oid="q_v2fpw">
-                                Need Immediate Help?
-                            </h4>
-                            <div className="space-y-2" data-oid="2.qqyk8">
-                                <p className="flex items-center space-x-2" data-oid="bi4:9a5">
-                                    <span data-oid="wcz7im4">📞</span>
-                                    <span data-oid="r5ifxvt">Crisis Hotline: 1-800-FREEDOM</span>
-                                </p>
-                                <p className="flex items-center space-x-2" data-oid="s:a59nr">
-                                    <span data-oid="-nup1na">💬</span>
-                                    <span data-oid="w4u1kk4">Text "HOPE" to 741741</span>
-                                </p>
-                                <p className="flex items-center space-x-2" data-oid="daejado">
-                                    <span data-oid="hi4v_uc">✉️</span>
-                                    <span data-oid="i00ubg:">help@therealfreedm.org</span>
-                                </p>
+                                <div data-oid=":9q9efv">
+                                    <label
+                                        className="block text-sm font-medium mb-2"
+                                        data-oid="ym_egz6"
+                                    >
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                                        placeholder="your.email@example.com"
+                                        data-oid="weu.xna"
+                                    />
+                                </div>
+
+                                <div data-oid="vdanvw9">
+                                    <label
+                                        className="block text-sm font-medium mb-2"
+                                        data-oid="f8904b0"
+                                    >
+                                        Phone (Optional)
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                                        placeholder="(555) 123-4567"
+                                        data-oid="4z.m0rr"
+                                    />
+                                </div>
+
+                                <div data-oid="win7jr-">
+                                    <label
+                                        className="block text-sm font-medium mb-2"
+                                        data-oid="0-zaawi"
+                                    >
+                                        How can we help?
+                                    </label>
+                                    <Select data-oid="1cfvnc_">
+                                        <SelectTrigger data-oid="arm68ay">
+                                            <SelectValue
+                                                placeholder="Select an option"
+                                                data-oid="nuw_nr1"
+                                            />
+                                        </SelectTrigger>
+                                        <SelectContent data-oid="nzeh95a">
+                                            <SelectItem value="help" data-oid="tfmbruu">
+                                                I need help
+                                            </SelectItem>
+                                            <SelectItem value="volunteer" data-oid="0splx2q">
+                                                I want to volunteer
+                                            </SelectItem>
+                                            <SelectItem value="donate" data-oid=":xwp6_t">
+                                                I want to donate
+                                            </SelectItem>
+                                            <SelectItem value="testimony" data-oid=":q8twgi">
+                                                I have a testimony
+                                            </SelectItem>
+                                            <SelectItem value="church" data-oid="2z-0s7v">
+                                                Church partnership
+                                            </SelectItem>
+                                            <SelectItem value="prayer" data-oid="rm:oa3_">
+                                                Prayer request
+                                            </SelectItem>
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+
+                                <div data-oid="4dxsbhm">
+                                    <label
+                                        className="block text-sm font-medium mb-2"
+                                        data-oid="lkfcda2"
+                                    >
+                                        Message
+                                    </label>
+                                    <textarea
+                                        rows={4}
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                                        placeholder="Tell us more about how we can help..."
+                                        data-oid=":39sxrc"
+                                    ></textarea>
+                                </div>
+
+                                <Button
+                                    type="submit"
+                                    className="w-full bg-amber-500 text-white py-4 rounded-lg font-semibold text-lg hover:bg-amber-600 transition-colors focus:outline-none focus:ring-4 focus:ring-amber-300"
+                                    data-oid="6c8a._m"
+                                >
+                                    Send Message
+                                </Button>
+                            </form>
+
+                            <div className="mt-8 pt-8 border-t border-white/20" data-oid="phrbpjq">
+                                <h4 className="font-semibold mb-4" data-oid="4mkkrka">
+                                    Need Immediate Help?
+                                </h4>
+                                <div className="space-y-2" data-oid="sj02xd8">
+                                    <p className="flex items-center space-x-2" data-oid="8qzss7e">
+                                        <span data-oid="asq5de4">📞</span>
+                                        <span data-oid="sh.d0si">
+                                            Crisis Hotline: 1-800-FREEDOM
+                                        </span>
+                                    </p>
+                                    <p className="flex items-center space-x-2" data-oid="-bzfopg">
+                                        <span data-oid="tlehayg">💬</span>
+                                        <span data-oid="xzs-sce">Text "HOPE" to 741741</span>
+                                    </p>
+                                    <p className="flex items-center space-x-2" data-oid="avd3mr4">
+                                        <span data-oid="r0yfsox">✉️</span>
+                                        <span data-oid="3mzdsbp">help@therealfreedm.org</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </CardContent>
+                    </Card>
                 </div>
             </Section>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white py-16" data-oid="08y50hz">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="j5qnoua">
-                    <div className="grid md:grid-cols-4 gap-8" data-oid="zj-zlx2">
-                        <div data-oid="21xd2rz">
-                            <div className="flex items-center space-x-3 mb-6" data-oid="r19y8rb">
+            <footer className="bg-gray-900 text-white py-16" data-oid="hl3poh9">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="cx3nmba">
+                    <div className="grid md:grid-cols-4 gap-8" data-oid="5nn-ga_">
+                        <div data-oid="o_q7k2:">
+                            <div className="flex items-center space-x-3 mb-6" data-oid="3o2-aae">
                                 <div
                                     className="w-10 h-10 bg-gradient-to-r from-blue-600 to-amber-500 rounded-full flex items-center justify-center"
-                                    data-oid="_jnt-2u"
+                                    data-oid="x:76zj."
                                 >
                                     <span
                                         className="text-white font-bold text-lg"
-                                        data-oid=":-c.5:g"
+                                        data-oid="501xodw"
                                     >
                                         ✝
                                     </span>
                                 </div>
-                                <h3 className="text-xl font-bold" data-oid="wc9_cfw">
+                                <h3 className="text-xl font-bold" data-oid="ldbcis8">
                                     The Real Freedom
                                 </h3>
                             </div>
-                            <p className="text-gray-400 leading-relaxed" data-oid="o9c:trj">
+                            <p className="text-gray-400 leading-relaxed" data-oid="l0cy1dv">
                                 Setting the captives free through the power of Jesus Christ. Real
                                 freedom for real people facing real struggles.
                             </p>
                         </div>
 
-                        <div data-oid="kbdszz0">
-                            <h4 className="text-lg font-semibold mb-4" data-oid="u0zgzbc">
+                        <div data-oid="67bwua1">
+                            <h4 className="text-lg font-semibold mb-4" data-oid=".bqsayl">
                                 Quick Links
                             </h4>
-                            <ul className="space-y-2" data-oid="wg9a8hd">
+                            <ul className="space-y-2" data-oid="cbp58ur">
                                 {[
                                     'About Us',
                                     'Get Help',
@@ -1425,11 +1460,11 @@ export default function Page() {
                                     'Resources',
                                     'Contact',
                                 ].map((link) => (
-                                    <li key={link} data-oid="rwn9of-">
+                                    <li key={link} data-oid="0yg_kci">
                                         <a
                                             href="#"
                                             className="text-gray-400 hover:text-white transition-colors"
-                                            data-oid=":y6duy4"
+                                            data-oid="_mnh_6t"
                                         >
                                             {link}
                                         </a>
@@ -1438,11 +1473,11 @@ export default function Page() {
                             </ul>
                         </div>
 
-                        <div data-oid="zk94h6a">
-                            <h4 className="text-lg font-semibold mb-4" data-oid="4zl2sy8">
+                        <div data-oid="5h7_w7w">
+                            <h4 className="text-lg font-semibold mb-4" data-oid="t6hoxzz">
                                 Resources
                             </h4>
-                            <ul className="space-y-2" data-oid="ymj54fh">
+                            <ul className="space-y-2" data-oid="f.5ypl5">
                                 {[
                                     'Crisis Hotline',
                                     'Support Groups',
@@ -1450,11 +1485,11 @@ export default function Page() {
                                     'Testimonies',
                                     'Training Materials',
                                 ].map((resource) => (
-                                    <li key={resource} data-oid="5yyx9o_">
+                                    <li key={resource} data-oid="g0-6r3g">
                                         <a
                                             href="#"
                                             className="text-gray-400 hover:text-white transition-colors"
-                                            data-oid="ozg6i.c"
+                                            data-oid="wb:p1-2"
                                         >
                                             {resource}
                                         </a>
@@ -1463,27 +1498,27 @@ export default function Page() {
                             </ul>
                         </div>
 
-                        <div data-oid="8m.g61o">
-                            <h4 className="text-lg font-semibold mb-4" data-oid="wmtqpo9">
+                        <div data-oid="ti7k6w8">
+                            <h4 className="text-lg font-semibold mb-4" data-oid="iexi0yz">
                                 Connect
                             </h4>
-                            <div className="space-y-4" data-oid="23fzzpc">
-                                <p className="text-gray-400" data-oid="_e:dqxb">
+                            <div className="space-y-4" data-oid="vbmb4jd">
+                                <p className="text-gray-400" data-oid="1-kqzjx">
                                     📧 info@therealfreedm.org
-                                    <br data-oid="pf0n:q_" />
+                                    <br data-oid="wze_crd" />
                                     📞 1-800-FREEDOM
-                                    <br data-oid="hbl4v0d" />
+                                    <br data-oid="x:w66-2" />
                                     💬 Text HOPE to 741741
                                 </p>
-                                <div className="flex space-x-4" data-oid="ssuczdf">
+                                <div className="flex space-x-4" data-oid="sl.ilv6">
                                     {['📘', '📷', '🐦', '📺'].map((icon, index) => (
-                                        <button
+                                        <Button
                                             key={index}
                                             className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
-                                            data-oid="x.u9q5f"
+                                            data-oid="9bl39ov"
                                         >
                                             {icon}
-                                        </button>
+                                        </Button>
                                     ))}
                                 </div>
                             </div>
@@ -1492,11 +1527,11 @@ export default function Page() {
 
                     <div
                         className="border-t border-gray-800 mt-12 pt-8 text-center"
-                        data-oid="8m4qpcp"
+                        data-oid="l7p.xlv"
                     >
-                        <p className="text-gray-400" data-oid="323mtjq">
+                        <p className="text-gray-400" data-oid="pt3pcrz">
                             © 2024 The Real Freedom Ministry. All rights reserved. |
-                            <span className="text-amber-300" data-oid="28s1wm_">
+                            <span className="text-amber-300" data-oid="x0ryqf.">
                                 {' '}
                                 "If the Son sets you free, you will be free indeed." - John 8:36
                             </span>
