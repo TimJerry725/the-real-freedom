@@ -235,23 +235,18 @@ export default function Page() {
                     </div>
 
                     <h1
-                        className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-slate-700 via-blue-600 to-indigo-700 bg-clip-text text-transparent"
+                        className="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-slate-700 via-blue-600 to-indigo-700 bg-clip-text text-transparent"
                         data-oid="f_x7vkc"
                     >
-                        REAL Freedom <br data-oid="yg4mzcc" />
+                        REAL Freedom{' '}
                         <span
                             className="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 bg-clip-text text-transparent"
                             data-oid="2o:z-mr"
                         >
                             Starts Here
-                        </span>
+                        </span>{' '}
+                        – From Bondage to Breakthrough
                     </h1>
-                    <p
-                        className="text-xl md:text-2xl mb-4 text-slate-600 max-w-4xl mx-auto font-medium"
-                        data-oid="g6a6:vd"
-                    >
-                        From Bondage to Breakthrough
-                    </p>
                     <div
                         className="bg-white/70 backdrop-blur-md rounded-3xl p-8 mb-12 max-w-4xl mx-auto border border-white/40 shadow-xl"
                         data-oid="xyqdw7."
