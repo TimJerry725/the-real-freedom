@@ -106,19 +106,19 @@ export default function Page() {
 
     return (
         <div
-            className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-amber-50"
+            className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-rose-50"
             data-oid="f1dl67c"
         >
             {/* Navigation */}
             <nav
-                className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b border-blue-100"
+                className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-lg z-50 border-b border-sky-100"
                 data-oid="wbu1h00"
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="7k5s37b">
                     <div className="flex justify-between items-center py-4" data-oid="ow19aab">
                         <div className="flex items-center space-x-3" data-oid="la5vxjb">
                             <div
-                                className="w-10 h-10 bg-gradient-to-r from-blue-600 to-amber-500 rounded-full flex items-center justify-center"
+                                className="w-10 h-10 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full flex items-center justify-center shadow-lg"
                                 data-oid="ijo-.ds"
                             >
                                 <span className="text-white font-bold text-lg" data-oid="8.me165">
@@ -126,7 +126,7 @@ export default function Page() {
                                 </span>
                             </div>
                             <h1
-                                className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-amber-500 bg-clip-text text-transparent"
+                                className="text-2xl font-bold bg-gradient-to-r from-slate-700 to-indigo-600 bg-clip-text text-transparent"
                                 data-oid="4o.ieei"
                             >
                                 The Real Freedom
@@ -152,7 +152,7 @@ export default function Page() {
 
                         <div className="flex space-x-4" data-oid="qkyqse6">
                             <Button
-                                variant="default"
+                                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-6 py-2 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-300"
                                 onClick={() => scrollToSection('help')}
                                 data-oid="5ohy148"
                             >
@@ -160,7 +160,7 @@ export default function Page() {
                             </Button>
 
                             <Button
-                                variant="outline"
+                                className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-6 py-2 rounded-full font-medium transition-all duration-300"
                                 onClick={() => scrollToSection('contact')}
                                 data-oid="qtays3u"
                             >
@@ -172,44 +172,103 @@ export default function Page() {
             </nav>
 
             {/* Hero Section */}
-            <Section
-                id="home"
-                className="pt-32 pb-20 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white"
-                data-oid=":quzb4r"
-            >
+            <Section id="home" className="pt-32 pb-20 relative overflow-hidden" data-oid=":quzb4r">
+                {/* Background Image with Overlay */}
                 <div
-                    className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                    className="absolute inset-0 bg-gradient-to-br from-sky-100 via-white to-rose-50"
+                    style={{
+                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.85), rgba(240, 249, 255, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23e0f2fe"/><stop offset="100%" stop-color="%23f0f9ff"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23a)"/><g opacity="0.1"><circle cx="200" cy="200" r="100" fill="%23bfdbfe"/><circle cx="800" cy="300" r="150" fill="%23ddd6fe"/><circle cx="300" cy="700" r="120" fill="%23fecaca"/><circle cx="700" cy="800" r="80" fill="%23fed7aa"/></g></svg>')`,
+                    }}
+                    data-oid="q0-81p-"
+                />
+
+                {/* Floating Elements */}
+                <div
+                    className="absolute inset-0 overflow-hidden pointer-events-none"
+                    data-oid="xz0gb9n"
+                >
+                    <div
+                        className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-30 animate-pulse"
+                        data-oid=":ccuoo_"
+                    ></div>
+                    <div
+                        className="absolute top-40 right-20 w-16 h-16 bg-gradient-to-br from-rose-200 to-orange-200 rounded-full opacity-40 animate-bounce"
+                        data-oid="_7hgle8"
+                    ></div>
+                    <div
+                        className="absolute bottom-40 left-20 w-12 h-12 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-full opacity-35 animate-pulse"
+                        data-oid="p:z0a4d"
+                    ></div>
+                    <div
+                        className="absolute bottom-20 right-40 w-24 h-24 bg-gradient-to-br from-violet-200 to-indigo-200 rounded-full opacity-25 animate-bounce"
+                        data-oid="_3mfsb0"
+                    ></div>
+                </div>
+
+                <div
+                    className={`relative z-10 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                     data-oid="urave.."
                 >
+                    {/* Main Hero Image */}
+                    <div className="mb-8 flex justify-center" data-oid="konmi6.">
+                        <div className="relative" data-oid="yfd89.y">
+                            <div
+                                className="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-sky-300 via-blue-400 to-indigo-500 rounded-full flex items-center justify-center shadow-2xl"
+                                data-oid="p5abahj"
+                            >
+                                <span
+                                    className="text-white text-6xl md:text-7xl font-light"
+                                    data-oid="_.v2o_6"
+                                >
+                                    ✝
+                                </span>
+                            </div>
+                            <div
+                                className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-yellow-300 to-amber-400 rounded-full animate-pulse"
+                                data-oid="hy:vca:"
+                            ></div>
+                            <div
+                                className="absolute -bottom-2 -left-2 w-6 h-6 bg-gradient-to-br from-rose-300 to-pink-400 rounded-full animate-bounce"
+                                data-oid="k:ts5:_"
+                            ></div>
+                        </div>
+                    </div>
+
                     <h1
-                        className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+                        className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-slate-700 via-blue-600 to-indigo-700 bg-clip-text text-transparent"
                         data-oid="f_x7vkc"
                     >
                         REAL Freedom <br data-oid="yg4mzcc" />
-                        <span className="text-amber-300" data-oid="2o:z-mr">
+                        <span
+                            className="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 bg-clip-text text-transparent"
+                            data-oid="2o:z-mr"
+                        >
                             Starts Here
                         </span>
                     </h1>
                     <p
-                        className="text-xl md:text-2xl mb-4 text-blue-100 max-w-4xl mx-auto"
+                        className="text-xl md:text-2xl mb-4 text-slate-600 max-w-4xl mx-auto font-medium"
                         data-oid="g6a6:vd"
                     >
                         From Bondage to Breakthrough
                     </p>
                     <div
-                        className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 max-w-4xl mx-auto border border-white/20"
+                        className="bg-white/70 backdrop-blur-md rounded-3xl p-8 mb-12 max-w-4xl mx-auto border border-white/40 shadow-xl"
                         data-oid="xyqdw7."
                     >
                         <h2
-                            className="text-3xl md:text-4xl font-bold mb-6 text-amber-300"
+                            className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"
                             data-oid="tr4rzwe"
                         >
                             You were made for more.
                         </h2>
-                        <p className="text-xl md:text-2xl mb-6" data-oid="ayu_k9_">
+                        <p
+                            className="text-xl md:text-2xl mb-6 text-slate-700 font-medium"
+                            data-oid="ayu_k9_"
+                        >
                             You are not your addiction.
                         </p>
-                        <p className="text-lg text-blue-100 leading-relaxed" data-oid="ujvaqrb">
+                        <p className="text-lg text-slate-600 leading-relaxed" data-oid="ujvaqrb">
                             We're here to stand with the broken, to love the addicted, and to walk
                             with those who are ready to be free – really free.
                         </p>
@@ -220,15 +279,15 @@ export default function Page() {
                         data-oid="7yyb6qz"
                     >
                         <Button
-                            variant="secondary"
+                            className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                             onClick={() => scrollToSection('help')}
                             data-oid="y4pp4ke"
                         >
-                            Get Help
+                            Get Help Now
                         </Button>
 
                         <Button
-                            variant="outline"
+                            className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                             onClick={() => scrollToSection('get-involved')}
                             data-oid="jcjyjl:"
                         >
@@ -236,7 +295,7 @@ export default function Page() {
                         </Button>
 
                         <Button
-                            variant="outline"
+                            className="bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                             onClick={() => scrollToSection('contact')}
                             data-oid="3cfxaj8"
                         >
