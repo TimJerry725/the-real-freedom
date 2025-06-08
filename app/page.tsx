@@ -17,6 +17,7 @@ import {
     SelectItem,
     SelectValue,
 } from '@/components/ui/select';
+import { Logo } from '@/components/Logo';
 
 // TypeScript interfaces
 interface SectionProps {
@@ -116,22 +117,7 @@ export default function Page() {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="7k5s37b">
                     <div className="flex justify-between items-center py-4" data-oid="ow19aab">
-                        <div className="flex items-center space-x-3" data-oid="la5vxjb">
-                            <div
-                                className="w-10 h-10 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full flex items-center justify-center shadow-lg"
-                                data-oid="ijo-.ds"
-                            >
-                                <span className="text-white font-bold text-lg" data-oid="8.me165">
-                                    ✝
-                                </span>
-                            </div>
-                            <h1
-                                className="text-2xl font-bold bg-gradient-to-r from-slate-700 to-indigo-600 bg-clip-text text-transparent"
-                                data-oid="4o.ieei"
-                            >
-                                The Real Freedom
-                            </h1>
-                        </div>
+                        <Logo size="md" showText={true} />
 
                         <div className="hidden lg:flex space-x-8" data-oid="h:p4vsb">
                             {navigationItems.slice(0, 5).map((item) => (
@@ -1484,23 +1470,9 @@ export default function Page() {
             {/* Footer */}
             <footer className="bg-gray-900 text-white py-16" data-oid="hl3poh9">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="cx3nmba">
-                    <div className="grid md:grid-cols-4 gap-8" data-oid="5nn-ga_">
-                        <div data-oid="o_q7k2:">
-                            <div className="flex items-center space-x-3 mb-6" data-oid="3o2-aae">
-                                <div
-                                    className="w-10 h-10 bg-gradient-to-r from-blue-600 to-amber-500 rounded-full flex items-center justify-center"
-                                    data-oid="x:76zj."
-                                >
-                                    <span
-                                        className="text-white font-bold text-lg"
-                                        data-oid="501xodw"
-                                    >
-                                        ✝
-                                    </span>
-                                </div>
-                                <h3 className="text-xl font-bold" data-oid="ldbcis8">
-                                    The Real Freedom
-                                </h3>
+                    <div className="grid md:grid-cols-4 gap-8" data-oid="5nn-ga_"<div data-oid="o_q7k2:">
+                            <div className="mb-6">
+                                <Logo size="md" showText={true} className="text-white" />
                             </div>
                             <p className="text-gray-400 leading-relaxed" data-oid="l0cy1dv">
                                 Setting the captives free through the power of Jesus Christ. Real
