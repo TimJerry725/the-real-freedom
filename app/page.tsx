@@ -247,55 +247,61 @@ export default function Page() {
                         </span>{' '}
                         – From Bondage to Breakthrough
                     </h1>
-                    <div
-                        className="bg-white/70 backdrop-blur-md rounded-3xl p-8 mb-12 max-w-4xl mx-auto border border-white/40 shadow-xl"
-                        data-oid="xyqdw7."
-                    >
-                        <h2
-                            className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"
-                            data-oid="tr4rzwe"
+                    {/* Content Section Below Hero */}
+                    <div className="mt-16" data-oid="najn2ms">
+                        <div
+                            className="bg-white/70 backdrop-blur-md rounded-3xl p-8 mb-12 max-w-4xl mx-auto border border-white/40 shadow-xl text-center"
+                            data-oid="xyqdw7."
                         >
-                            You were made for more.
-                        </h2>
-                        <p
-                            className="text-xl md:text-2xl mb-6 text-slate-700 font-medium"
-                            data-oid="ayu_k9_"
-                        >
-                            You are not your addiction.
-                        </p>
-                        <p className="text-lg text-slate-600 leading-relaxed" data-oid="ujvaqrb">
-                            We're here to stand with the broken, to love the addicted, and to walk
-                            with those who are ready to be free – really free.
-                        </p>
-                    </div>
+                            <h2
+                                className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"
+                                data-oid="tr4rzwe"
+                            >
+                                You were made for more.
+                            </h2>
+                            <p
+                                className="text-xl md:text-2xl mb-6 text-slate-700 font-medium"
+                                data-oid="ayu_k9_"
+                            >
+                                You are not your addiction.
+                            </p>
+                            <p
+                                className="text-lg text-slate-600 leading-relaxed"
+                                data-oid="ujvaqrb"
+                            >
+                                We're here to stand with the broken, to love the addicted, and to
+                                walk with those who are ready to be free – really free.
+                            </p>
+                        </div>
 
-                    <div
-                        className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                        data-oid="7yyb6qz"
-                    >
-                        <Button
-                            className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                            onClick={() => scrollToSection('help')}
-                            data-oid="y4pp4ke"
+                        <div
+                            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+                            data-oid="7yyb6qz"
                         >
-                            Get Help Now
-                        </Button>
+                            <Button
+                                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                                onClick={() => scrollToSection('help')}
+                                data-oid="y4pp4ke"
+                            >
+                                Get Help Now
+                            </Button>
 
-                        <Button
-                            className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                            onClick={() => scrollToSection('get-involved')}
-                            data-oid="jcjyjl:"
-                        >
-                            Join the Mission
-                        </Button>
+                            <Button
+                                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                                onClick={() => scrollToSection('get-involved')}
+                                data-oid="jcjyjl:"
+                            >
+                                Join the Mission
+                            </Button>
 
-                        <Button
-                            className="bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                            onClick={() => scrollToSection('contact')}
-                            data-oid="3cfxaj8"
-                        >
-                            Pray with Us
-                        </Button>
+                            <Button
+                                className="bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                                onClick={() => scrollToSection('contact')}
+                                data-oid="3cfxaj8"
+                            >
+                                Pray with Us
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </Section>
