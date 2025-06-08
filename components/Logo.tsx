@@ -52,6 +52,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                                 stroke="#1e3a8a"
                                 strokeWidth="3"
                             />
+
                             <ellipse
                                 cx="0"
                                 cy="0"
@@ -61,6 +62,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                                 stroke="#1e3a8a"
                                 strokeWidth="3"
                             />
+
                             <ellipse
                                 cx="0"
                                 cy="8"
@@ -70,6 +72,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                                 stroke="#1e3a8a"
                                 strokeWidth="3"
                             />
+
                             {/* Break lines */}
                             <line
                                 x1="-4"
@@ -79,6 +82,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                                 stroke="#1e3a8a"
                                 strokeWidth="2"
                             />
+
                             <line x1="4" y1="-2" x2="8" y2="-6" stroke="#1e3a8a" strokeWidth="2" />
                             <line x1="-4" y1="2" x2="-8" y2="6" stroke="#1e3a8a" strokeWidth="2" />
                             <line x1="4" y1="2" x2="8" y2="6" stroke="#1e3a8a" strokeWidth="2" />
@@ -95,6 +99,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                                 stroke="#1e3a8a"
                                 strokeWidth="3"
                             />
+
                             <ellipse
                                 cx="0"
                                 cy="0"
@@ -104,6 +109,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                                 stroke="#1e3a8a"
                                 strokeWidth="3"
                             />
+
                             <ellipse
                                 cx="0"
                                 cy="8"
@@ -113,6 +119,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                                 stroke="#1e3a8a"
                                 strokeWidth="3"
                             />
+
                             {/* Break lines */}
                             <line
                                 x1="-4"
@@ -122,6 +129,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                                 stroke="#1e3a8a"
                                 strokeWidth="2"
                             />
+
                             <line x1="4" y1="-2" x2="8" y2="-6" stroke="#1e3a8a" strokeWidth="2" />
                             <line x1="-4" y1="2" x2="-8" y2="6" stroke="#1e3a8a" strokeWidth="2" />
                             <line x1="4" y1="2" x2="8" y2="6" stroke="#1e3a8a" strokeWidth="2" />
@@ -135,6 +143,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', showTex
                             fill="#f59e0b"
                             className="drop-shadow-md"
                         />
+
                         {/* Dove body */}
                         <ellipse cx="0" cy="2" rx="6" ry="4" fill="#f59e0b" />
                         {/* Dove head */}
