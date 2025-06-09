@@ -37,7 +37,12 @@ import {
     faGift,
     faPhone,
     faComment,
-    faEnvelope
+    faEnvelope,
+    faBrain,
+    faLink,
+    faUserMd,
+    faHome,
+    faExclamationTriangle
 } from '@fortawesome/free-solid-svg-icons';
 import { 
     faFacebookF, 
@@ -789,41 +794,35 @@ export default function Page() {
                     {[
                         {
                             title: 'Defining Depression',
-                            description:
-                                'Understanding the clinical and spiritual aspects of depression',
-                            icon: '🧠',
-                            color: 'indigo',
+                            description: 'Understanding the clinical and spiritual aspects of depression',
+                            icon: faBrain,
+                            color: 'text-indigo-600'
                         },
                         {
                             title: 'Link to Addiction',
                             description: 'How depression and substance abuse feed into each other',
-                            icon: '🔗',
-                            color: 'purple',
+                            icon: faLink,
+                            color: 'text-purple-600'
                         },
                         {
                             title: 'Support Strategies',
-                            description:
-                                'Practical ways to support those struggling with depression',
-                            icon: '🤝',
-                            color: 'blue',
+                            description: 'Practical ways to support those struggling with depression',
+                            icon: faHandshake,
+                            color: 'text-blue-600'
                         },
                         {
                             title: 'Professional Resources',
-                            description:
-                                'Connecting with qualified Christian therapists and counselors',
-                            icon: '👨‍⚕️',
-                            color: 'green',
+                            description: 'Connecting with qualified Christian therapists and counselors',
+                            icon: faUserMd,
+                            color: 'text-green-600'
                         },
                     ].map((item, index) => (
-                        <Card
-                            key={index}
-                            className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-                        >
+                        <Card key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                             <CardHeader>
-                                <div className="text-3xl mb-4">{item.icon}</div>
-                                <CardTitle
-                                    className={`text-lg font-bold text-${item.color}-600 mb-3`}
-                                >
+                                <div className={`text-3xl mb-4 ${item.color}`}>
+                                    <FontAwesomeIcon icon={item.icon} />
+                                </div>
+                                <CardTitle className={`text-lg font-bold text-${item.color} mb-3`}>
                                     {item.title}
                                 </CardTitle>
                             </CardHeader>
@@ -866,53 +865,52 @@ export default function Page() {
                     {[
                         {
                             title: 'Volunteer',
-                            description:
-                                'Serve directly with those in recovery through mentoring, support groups, and outreach',
-                            icon: '🙋‍♀️',
+                            description: 'Serve directly with those in recovery through mentoring, support groups, and outreach',
+                            icon: faHandHoldingHeart,
                             action: 'Start Volunteering',
+                            color: 'text-rose-600'
                         },
                         {
                             title: 'Partner Church',
-                            description:
-                                'Bring The Real Freedom ministry to your congregation and community',
-                            icon: '⛪',
+                            description: 'Bring The Real Freedom ministry to your congregation and community',
+                            icon: faChurch,
                             action: 'Become a Partner',
+                            color: 'text-blue-600'
                         },
                         {
                             title: 'Weekly Prayer',
-                            description:
-                                'Join our prayer team and intercede for those struggling with addiction',
-                            icon: '🙏',
+                            description: 'Join our prayer team and intercede for those struggling with addiction',
+                            icon: faPrayingHands,
                             action: 'Join Prayer Team',
+                            color: 'text-emerald-600'
                         },
                         {
                             title: 'Support a Recovery Center',
-                            description:
-                                'Help fund and support local recovery centers and halfway houses',
-                            icon: '🏠',
+                            description: 'Help fund and support local recovery centers and halfway houses',
+                            icon: faHome,
                             action: 'Support Centers',
+                            color: 'text-amber-600'
                         },
                         {
                             title: 'Sponsor a Freedom Certificate',
-                            description:
-                                'Fund certification training for pastors and ministry leaders',
-                            icon: '📜',
+                            description: 'Fund certification training for pastors and ministry leaders',
+                            icon: faScroll,
                             action: 'Sponsor Training',
+                            color: 'text-purple-600'
                         },
                         {
                             title: 'Monthly Giving',
-                            description:
-                                'Provide ongoing support for our ministry operations and outreach',
-                            icon: '💝',
+                            description: 'Provide ongoing support for our ministry operations and outreach',
+                            icon: faGift,
                             action: 'Give Monthly',
+                            color: 'text-indigo-600'
                         },
                     ].map((item, index) => (
-                        <Card
-                            key={index}
-                            className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-105"
-                        >
+                        <Card key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <CardHeader>
-                                <div className="text-4xl mb-4">{item.icon}</div>
+                                <div className={`text-4xl mb-4 ${item.color}`}>
+                                    <FontAwesomeIcon icon={item.icon} />
+                                </div>
                                 <CardTitle className="text-xl font-bold text-gray-800">
                                     {item.title}
                                 </CardTitle>
@@ -960,23 +958,35 @@ export default function Page() {
                         <div className="space-y-4">
                             {[
                                 {
-                                    icon: '🆘',
+                                    icon: faExclamationTriangle,
                                     text: 'I need help with addiction',
-                                    color: 'bg-red-500',
+                                    color: 'bg-red-500'
                                 },
-                                { icon: '🤝', text: 'I want to volunteer', color: 'bg-green-500' },
-                                { icon: '💝', text: 'I want to donate', color: 'bg-amber-500' },
+                                { 
+                                    icon: faHandshake, 
+                                    text: 'I want to volunteer', 
+                                    color: 'bg-green-500' 
+                                },
+                                { 
+                                    icon: faGift, 
+                                    text: 'I want to donate', 
+                                    color: 'bg-amber-500' 
+                                },
                                 {
-                                    icon: '✨',
+                                    icon: faWandMagicSparkles,
                                     text: 'I have a testimony to share',
-                                    color: 'bg-purple-500',
+                                    color: 'bg-purple-500'
                                 },
                                 {
-                                    icon: '⛪',
+                                    icon: faChurch,
                                     text: 'I represent a church',
-                                    color: 'bg-indigo-500',
+                                    color: 'bg-indigo-500'
                                 },
-                                { icon: '🙏', text: 'I need prayer', color: 'bg-pink-500' },
+                                { 
+                                    icon: faPrayingHands, 
+                                    text: 'I need prayer', 
+                                    color: 'bg-pink-500' 
+                                },
                             ].map((option, index) => (
                                 <Button
                                     key={index}
@@ -985,7 +995,7 @@ export default function Page() {
                                     <div
                                         className={`w-12 h-12 ${option.color} rounded-full flex items-center justify-center text-xl`}
                                     >
-                                        {option.icon}
+                                        <FontAwesomeIcon icon={option.icon} className="text-white" />
                                     </div>
                                     <span className="text-lg font-medium">{option.text}</span>
                                 </Button>
