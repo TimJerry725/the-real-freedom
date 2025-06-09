@@ -18,6 +18,33 @@ import {
     SelectValue,
 } from '@/components/ui/select';
 import { Logo } from '@/components/Logo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+    faHandshake, 
+    faShieldHalved, 
+    faWandMagicSparkles, 
+    faHeart, 
+    faUsers, 
+    faPrayingHands,
+    faClipboard,
+    faTheaterMasks,
+    faVideo,
+    faTools,
+    faBook,
+    faHandHoldingHeart,
+    faChurch,
+    faScroll,
+    faGift,
+    faPhone,
+    faComment,
+    faEnvelope
+} from '@fortawesome/free-solid-svg-icons';
+import { 
+    faFacebookF, 
+    faInstagram, 
+    faTwitter, 
+    faYoutube 
+} from '@fortawesome/free-brands-svg-icons';
 
 // TypeScript interfaces
 interface SectionProps {
@@ -379,45 +406,46 @@ export default function Page() {
                     {[
                         {
                             title: "What to do if you're addicted",
-                            description:
-                                'Practical steps to begin your journey to freedom, starting today.',
-                            icon: '🤝',
+                            description: 'Practical steps to begin your journey to freedom, starting today.',
+                            icon: faHandshake,
+                            color: 'text-blue-600'
                         },
                         {
                             title: 'How to say no the first time',
-                            description:
-                                'Prevention strategies and tools for those facing temptation.',
-                            icon: '🛡️',
+                            description: 'Prevention strategies and tools for those facing temptation.',
+                            icon: faShieldHalved,
+                            color: 'text-amber-600'
                         },
                         {
                             title: 'Transformation Stories',
-                            description:
-                                'Real testimonies from people who found freedom through Christ.',
-                            icon: '✨',
+                            description: 'Real testimonies from people who found freedom through Christ.',
+                            icon: faWandMagicSparkles,
+                            color: 'text-purple-600'
                         },
                         {
                             title: 'Support for Families & Spouses',
                             description: 'Resources for loved ones affected by addiction.',
-                            icon: '❤️',
+                            icon: faHeart,
+                            color: 'text-rose-600'
                         },
                         {
                             title: 'Certified Counselors',
-                            description:
-                                'Connect with trained Christian counselors who understand addiction.',
-                            icon: '👥',
+                            description: 'Connect with trained Christian counselors who understand addiction.',
+                            icon: faUsers,
+                            color: 'text-indigo-600'
                         },
                         {
                             title: '24/7 Prayer Support',
                             description: 'Someone is always available to pray with you.',
-                            icon: '🙏',
+                            icon: faPrayingHands,
+                            color: 'text-emerald-600'
                         },
                     ].map((item, index) => (
-                        <Card
-                            key={index}
-                            className="hover:shadow-lg transition-shadow duration-300"
-                        >
+                        <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                             <CardHeader>
-                                <div className="text-4xl mb-4">{item.icon}</div>
+                                <div className={`text-4xl mb-4 ${item.color}`}>
+                                    <FontAwesomeIcon icon={item.icon} />
+                                </div>
                                 <CardTitle className="text-xl font-bold text-gray-800">
                                     {item.title}
                                 </CardTitle>
@@ -631,32 +659,35 @@ export default function Page() {
                         <div className="grid grid-cols-2 gap-4">
                             {[
                                 {
-                                    icon: '🎭',
+                                    icon: faTheaterMasks,
                                     title: 'Skit Scripts',
                                     desc: 'Ready-to-perform educational skits',
+                                    color: 'text-blue-600'
                                 },
                                 {
-                                    icon: '📋',
+                                    icon: faClipboard,
                                     title: 'Posters',
                                     desc: 'Eye-catching awareness materials',
+                                    color: 'text-amber-600'
                                 },
                                 {
-                                    icon: '🎥',
+                                    icon: faVideo,
                                     title: 'Testimony Videos',
                                     desc: 'Real stories of prevention success',
+                                    color: 'text-purple-600'
                                 },
                                 {
-                                    icon: '🛠️',
+                                    icon: faTools,
                                     title: 'Workshop Kits',
                                     desc: 'Complete educational packages',
+                                    color: 'text-emerald-600'
                                 },
                             ].map((tool, index) => (
-                                <Card
-                                    key={index}
-                                    className="bg-white rounded-lg p-4 shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
-                                >
+                                <Card key={index} className="bg-white rounded-lg p-4 shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
                                     <CardHeader>
-                                        <div className="text-2xl mb-2">{tool.icon}</div>
+                                        <div className={`text-2xl mb-2 ${tool.color}`}>
+                                            <FontAwesomeIcon icon={tool.icon} />
+                                        </div>
                                         <CardTitle className="font-semibold text-gray-800">
                                             {tool.title}
                                         </CardTitle>
@@ -1129,14 +1160,18 @@ export default function Page() {
                                     💬 Text HOPE to 741741
                                 </p>
                                 <div className="flex space-x-4">
-                                    {['📘', '📷', '🐦', '📺'].map((icon, index) => (
-                                        <Button
-                                            key={index}
-                                            className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
-                                        >
-                                            {icon}
-                                        </Button>
-                                    ))}
+                                    <Button className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                        <FontAwesomeIcon icon={faFacebookF} className="text-white" />
+                                    </Button>
+                                    <Button className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                        <FontAwesomeIcon icon={faInstagram} className="text-white" />
+                                    </Button>
+                                    <Button className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                        <FontAwesomeIcon icon={faTwitter} className="text-white" />
+                                    </Button>
+                                    <Button className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+                                        <FontAwesomeIcon icon={faYoutube} className="text-white" />
+                                    </Button>
                                 </div>
                             </div>
                         </div>
