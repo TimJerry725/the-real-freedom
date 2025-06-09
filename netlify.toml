@@ -8,6 +8,4 @@
   NPM_FLAGS = "--legacy-peer-deps"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    nextConfigDir = "." 
+  package = "@netlify/plugin-nextjs" 
