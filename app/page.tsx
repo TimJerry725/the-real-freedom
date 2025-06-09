@@ -558,19 +558,27 @@ export default function Page() {
                         </p>
                         <div className="space-y-4">
                             <div className="flex items-center space-x-3">
-                                <span className="text-amber-300">📚</span>
+                                <span className="text-amber-300">
+                                    <FontAwesomeIcon icon={faBook} />
+                                </span>
                                 <span>Comprehensive training materials</span>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <span className="text-amber-300">🤝</span>
+                                <span className="text-amber-300">
+                                    <FontAwesomeIcon icon={faHandshake} />
+                                </span>
                                 <span>Ongoing mentorship and support</span>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <span className="text-amber-300">🌐</span>
+                                <span className="text-amber-300">
+                                    <FontAwesomeIcon icon={faUsers} />
+                                </span>
                                 <span>Access to exclusive pastor network</span>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <span className="text-amber-300">📖</span>
+                                <span className="text-amber-300">
+                                    <FontAwesomeIcon icon={faScroll} />
+                                </span>
                                 <span>Free downloadable resources</span>
                             </div>
                         </div>
@@ -1070,15 +1078,21 @@ export default function Page() {
                                 <h4 className="font-semibold mb-4">Need Immediate Help?</h4>
                                 <div className="space-y-2">
                                     <p className="flex items-center space-x-2">
-                                        <span>📞</span>
+                                        <span>
+                                            <FontAwesomeIcon icon={faPhone} />
+                                        </span>
                                         <span>Crisis Hotline: 1-800-FREEDOM</span>
                                     </p>
                                     <p className="flex items-center space-x-2">
-                                        <span>💬</span>
+                                        <span>
+                                            <FontAwesomeIcon icon={faComment} />
+                                        </span>
                                         <span>Text "HOPE" to 741741</span>
                                     </p>
                                     <p className="flex items-center space-x-2">
-                                        <span>✉️</span>
+                                        <span>
+                                            <FontAwesomeIcon icon={faEnvelope} />
+                                        </span>
                                         <span>help@therealfreedm.org</span>
                                     </p>
                                 </div>
@@ -1095,7 +1109,7 @@ export default function Page() {
                         <div>
                             <div className="flex items-center space-x-3 mb-6">
                                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-amber-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white font-bold text-lg">✝</span>
+                                    <FontAwesomeIcon icon={faChurch} className="text-white text-lg" />
                                 </div>
                                 <h3 className="text-xl font-bold">The Real Freedom</h3>
                             </div>
@@ -1153,11 +1167,11 @@ export default function Page() {
                             <h4 className="text-lg font-semibold mb-4">Connect</h4>
                             <div className="space-y-4">
                                 <p className="text-gray-400">
-                                    📧 info@therealfreedm.org
+                                    <FontAwesomeIcon icon={faEnvelope} /> info@therealfreedm.org
                                     <br />
-                                    📞 1-800-FREEDOM
+                                    <FontAwesomeIcon icon={faPhone} /> 1-800-FREEDOM
                                     <br />
-                                    💬 Text HOPE to 741741
+                                    <FontAwesomeIcon icon={faComment} /> Text HOPE to 741741
                                 </p>
                                 <div className="flex space-x-4">
                                     <Button className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
