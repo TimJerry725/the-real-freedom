@@ -43,11 +43,11 @@ const TestimonyCard: React.FC<TestimonyCardProps> = ({ name, story, verse }) => 
     <Card className="bg-white/10 backdrop-blur-sm border border-white/20">
         <CardContent className="p-6">
             <blockquote className="text-gray-700 mb-6 italic text-lg leading-relaxed">
-                "{story}"
+                &ldquo;{story}&rdquo;
             </blockquote>
             <div className="border-t pt-4">
                 <p className="font-semibold text-blue-800 mb-2">- {name}</p>
-                <p className="text-sm text-blue-600 font-medium">"{verse}"</p>
+                <p className="text-sm text-blue-600 font-medium">&ldquo;{verse}&rdquo;</p>
             </div>
         </CardContent>
     </Card>
@@ -190,7 +190,7 @@ export default function Page() {
                                 You are not your addiction.
                             </p>
                             <p className="text-lg text-slate-600 leading-relaxed">
-                                We're here to stand with the broken, to love the addicted, and to
+                                We&apos;re here to stand with the broken, to love the addicted, and to
                                 walk with those who are ready to be free – really free.
                             </p>
                         </div>
@@ -245,8 +245,8 @@ export default function Page() {
                         </h3>
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                             Because temporary solutions lead to temporary results. Real freedom
-                            addresses the heart, not just the habit. It's freedom that lasts because
-                            it's rooted in the unchanging love of Christ.
+                            addresses the heart, not just the habit. It&apos;s freedom that lasts because
+                            it&apos;s rooted in the unchanging love of Christ.
                         </p>
                     </div>
 
@@ -255,15 +255,15 @@ export default function Page() {
                             Foundational Scripture
                         </h3>
                         <blockquote className="text-lg text-gray-700 mb-6 italic leading-relaxed">
-                            "Look at the birds of the air; they do not sow or reap or store away in
+                            &ldquo;Look at the birds of the air; they do not sow or reap or store away in
                             barns, and yet your heavenly Father feeds them. Are you not much more
-                            valuable than they?"
+                            valuable than they?&rdquo;
                         </blockquote>
                         <p className="text-blue-600 font-semibold mb-8">- Matthew 6:26</p>
 
                         <div className="border-t border-blue-200 pt-6">
                             <blockquote className="text-xl font-bold text-blue-800 mb-4">
-                                "If the Son sets you free, you will be free indeed."
+                                &ldquo;If the Son sets you free, you will be free indeed.&rdquo;
                             </blockquote>
                             <p className="text-blue-600 font-semibold">- John 8:36</p>
                         </div>
@@ -286,7 +286,7 @@ export default function Page() {
                         </h3>
                         <p className="text-gray-600 leading-relaxed">
                             Addiction hijacks the very systems God designed for good - our reward
-                            pathways, our need for connection, our desire for transcendence. It's a
+                            pathways, our need for connection, our desire for transcendence. It&apos;s a
                             spiritual battle that requires spiritual weapons.
                         </p>
                     </div>
@@ -305,7 +305,7 @@ export default function Page() {
                     <div className="bg-white rounded-xl shadow-lg p-8 border-t-4 border-green-600">
                         <h3 className="text-2xl font-bold text-green-600 mb-4">Total Freedom</h3>
                         <p className="text-gray-600 leading-relaxed">
-                            Jesus didn't just die for our sins - He rose again to give us power over
+                            Jesus didn&apos;t just die for our sins - He rose again to give us power over
                             them. His resurrection is our guarantee that no addiction is stronger
                             than His love.
                         </p>
@@ -370,8 +370,8 @@ export default function Page() {
                         Struggling? <span className="text-blue-600">You're Not Alone.</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Whether you're fighting addiction yourself or supporting someone who is,
-                        we're here to walk with you every step of the way.
+                        Whether you&apos;re fighting addiction yourself or supporting someone who is,
+                        we&apos;re here to walk with you every step of the way.
                     </p>
                 </div>
 
@@ -719,9 +719,9 @@ export default function Page() {
                             Accountability for Influencers
                         </h3>
                         <blockquote className="text-lg italic mb-6 text-gray-300">
-                            "If anyone causes one of these little ones—those who believe in me—to
+                            &ldquo;If anyone causes one of these little ones—those who believe in me—to
                             stumble, it would be better for them to have a large millstone hung
-                            around their neck and to be drowned in the depths of the sea."
+                            around their neck and to be drowned in the depths of the sea.&rdquo;
                         </blockquote>
                         <p className="text-amber-300 font-semibold mb-6">- Matthew 18:6</p>
                         <p className="text-gray-300 leading-relaxed">
@@ -909,7 +909,7 @@ export default function Page() {
                     </h2>
                     <p className="text-xl text-blue-100 max-w-3xl mx-auto">
                         Whether you need help, want to volunteer, or have a testimony to share,
-                        we're here for you.
+                        we&apos;re here for you.
                     </p>
                 </div>
 
@@ -1147,7 +1147,7 @@ export default function Page() {
                             © 2024 The Real Freedom Ministry. All rights reserved. |
                             <span className="text-amber-300">
                                 {' '}
-                                "If the Son sets you free, you will be free indeed." - John 8:36
+                                &ldquo;If the Son sets you free, you will be free indeed.&rdquo; - John 8:36
                             </span>
                         </p>
                     </div>
